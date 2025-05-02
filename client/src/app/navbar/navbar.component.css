@@ -1,0 +1,71 @@
+.navbar {
+    background-color: rgb(20, 21, 29);
+    height: 55px;
+
+}
+.nav-link {
+    color: aliceblue;
+    /* background-color: brown; */
+    /* border: solid; */
+    margin-right: 10px;
+    height: 3.5rem;
+    display: flex;
+     align-items: center;
+     border-radius: 2px;
+     font-size: 20px;
+     font-weight: 400;
+
+}
+
+.nav-link:hover {
+    background-color: azure;
+    color: black;
+
+}
+.navbar-brand{
+    color: aliceblue;
+    font-weight: 700;
+}
+
+
+
+.navbar-nav {
+    /* background-color: rgb(241, 211, 100); */
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    margin-left: 200px;
+    margin-right: 20px;
+    height: 3.5rem;
+
+}
+
+
+ 
+ 
+.menubar{
+    display: flex;
+    text-decoration: none;
+    list-style-type:none;
+    color: azure;
+    justify-content: center;
+    align-items: center;
+     
+     
+}
+ 
+.dropdown-item{
+    margin-top: 8px;
+    text-align: center;
+    /* background-color: red; */
+    width: 100px;
+
+}
+
+.dropdown-item:hover{
+    border: .5px solid white;
+    border-radius: 2px;
+}
+
+ 
+ 

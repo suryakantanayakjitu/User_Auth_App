@@ -1,0 +1,35 @@
+.container {
+    margin-top: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 600px;
+    background-image: linear-gradient(to right, rgb(239, 249, 255), rgb(176, 255, 247));
+    height: auto;
+    padding: 2% 1%;
+}
+
+.container div{
+    margin: 10px 0px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.error {
+    font-size: 14px;
+    color: #ff0000;
+}
+
+.mismatch {
+    color: #ff0000;
+}
+
+.match {
+    color: #008000;
+}
+
+.signupButton {
+    display: flex;
+    justify-content: center;
+}

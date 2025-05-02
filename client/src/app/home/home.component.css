@@ -1,0 +1,30 @@
+/* body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+} */
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 30vh 0;
+    font-size: 36px; /* Adjust for desired size */
+    font-weight: bold;
+    background: linear-gradient(to right, yellow, red);
+    font-family: 'Times New Roman', Times, serif;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}

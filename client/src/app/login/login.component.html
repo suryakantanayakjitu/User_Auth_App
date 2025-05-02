@@ -1,0 +1,20 @@
+<div class="container">
+    <form>
+        <div class="mb-3">
+            <label for="username" class="form-label"><b>Username :</b></label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Enter Your User Name" [(ngModel)]="username">
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label"><b>Password :</b></label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Enter Your Password" [(ngModel)]="password">
+        </div>
+
+        <div class="loginBtn"> 
+            <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+        </div>
+    </form>
+
+    <div class="text-center">New User <b><a style="text-decoration: none;" routerLink="/signup"> SignUp </a></b> here.</div>
+    <div class="text-center"> <b><a style="text-decoration: none;" routerLink="/forgot-password"> Forgot Your Password here.</a></b></div>
+</div>
