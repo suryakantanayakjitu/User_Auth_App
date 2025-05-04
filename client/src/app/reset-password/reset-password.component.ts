@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { ResetPasswordService } from './reset-password.service';
 
 @Component({
   selector: 'app-reset-password',
@@ -17,7 +17,7 @@ export class ResetPasswordComponent implements OnInit {
   showError: boolean = false;
   showSuccess: boolean = false;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient, private router: Router) { }
+  constructor(private route: ActivatedRoute, private ResetPassword: ResetPasswordService, private router: Router) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
@@ -45,27 +45,33 @@ export class ResetPasswordComponent implements OnInit {
   }
 
   submitResetForm(): void {
+    if(! this.password || ! this.confirmPassword){
+      alert("Please fill all fields before submitting.");
+      return;
+    }
+    
     if (this.password !== this.confirmPassword) {
       alert('Passwords do not match');
       return;
     }
 
-    this.http
-      .post(`http://localhost:3005/api/reset-password/${this.token}`, {
-        password: this.password,
-        confirmPassword: this.confirmPassword,
-      })
-      .subscribe(
-        (response: any) => {
-          alert(response.message);
-          if (response.success) {
-            this.router.navigate(['/login']);
-          }
-        },
-        (error) => {
-          alert('Something went wrong. Please try again.');
-          console.error(error);
+    const dataPassowrd = {
+      password: this.password,
+      confirmPassword: this.confirmPassword,
+      token : this.token
+    }
+
+    this.ResetPassword.resetPassword(dataPassowrd).subscribe(
+      (response: any) => {
+        alert(response.message);
+        if (response.success) {
+          this.router.navigate(['/login']);
         }
-      );
+      },
+      (error) => {
+        alert('Something went wrong. Please try again.');
+        console.error(error);
+      }
+    );
   }
 }

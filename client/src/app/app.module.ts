@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { GenerateForgotPasswordLinkComponent } from './generate-forgot-password-link/generate-forgot-password-link.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     LoginComponent,
     SignupComponent,
     ResetPasswordComponent,
-    ForgotPasswordComponent
+    GenerateForgotPasswordLinkComponent
   ],
   imports: [
     BrowserModule,

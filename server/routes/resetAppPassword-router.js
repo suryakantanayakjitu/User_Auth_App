@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const ResetPasswordRequestLink = require("../Function/ResetPasswordRequestLink");
-const ResetPassword = require("../Function/resetappPassword");
+const ResetPassword = require("../Function/resetapppassword");
 
 router.post("/requestResetPassword", async (req, res) => {
   const { useremail } = req.body ;
@@ -15,9 +15,8 @@ router.post("/requestResetPassword", async (req, res) => {
 });
 
 
-router.post("/reset-password/:token", async (req, res) => {
-  const { password, confirmPassword } = req.body;
-  const { token } = req.params;
+router.post("/reset-password", async (req, res) => {
+  const { password, confirmPassword, token} = req.body;
 
   if (!password || !confirmPassword) {
     return res.status(400).json({ success: false, message: "All fields are required" });

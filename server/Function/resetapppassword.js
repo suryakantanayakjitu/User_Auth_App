@@ -7,8 +7,8 @@ const ResetPassword = async function (token, newPassword) {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const userId = decoded.userid;
-    console.log(decoded);
-    console.log(userId);
+    // console.log(decoded);
+    // console.log(userId);
     
 
     const hashedPassword = await bcrypt.hash(newPassword, 10);
